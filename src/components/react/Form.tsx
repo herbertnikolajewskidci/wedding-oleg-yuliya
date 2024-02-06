@@ -18,8 +18,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
-import { Label } from "@radix-ui/react-label";
-import { Check } from "lucide-react";
 
 const FormSchema = z.object({
     username: z.string().min(2, {
@@ -56,7 +54,9 @@ export function InputForm() {
         { name: "Hähnchenschenkel", imgSrc: "/haehnchen.jpeg" },
     ];
 
-    const [bestellungen, setBestellungen] = useState("");
+    const [bestellungen, setBestellungen] = useState(
+        Array(gerichte.length).fill(0)
+    );
 
     const handleAnzahlAendern = (index: number, anzahl: number) => {
         const neueBestellungen = [...bestellungen];
@@ -85,6 +85,20 @@ export function InputForm() {
                     />
                 </div>
 
+                <div className="flex items-center space-x-3">
+                    <input
+                        type="checkbox"
+                        name="unterkunft"
+                        id="unterkunft"
+                        className="w-8 h-8 text-primary  border-secondary rounded focus:ring-primary dark:focus:ring-primary dark:ring-offset-primary focus:ring-2 dark:bg-primary dark:border-secondary"
+                    />
+                    <label
+                        htmlFor="unterkunft"
+                        className="font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                        Ich benötige eine Übernachtungsmöglichkeit
+                    </label>
+                </div>
                 <div className="flex flex-col gap-2">
                     {gerichte.map((gericht, index) => (
                         <div
