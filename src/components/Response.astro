@@ -1,10 +1,17 @@
+---
+import Header2 from "./Header2.astro";
+import { InputForm } from "@/components/react/Form.tsx";
+---
+
 <!-- Rückmeldungsformular -->
-<section class="container">
-    <h2 id="rueckmeldung">Rückmeldung</h2>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat labore
-        voluptas rem aut minima sequi, corrupti quidem eaque reprehenderit
-        explicabo ullam, reiciendis ipsum sint? Quos obcaecati deleniti fuga
-        quia ipsum.
+<section id="rueckmeldung" class="container py-10">
+    <Header2>Rückmeldung</Header2>
+
+    <p class="text-center my-5">
+        Damit der Wirt genug für uns alle vorbereiten kann, wäre es gut, wenn
+        Ihr uns mitteilt wer alles kommt und was ihr essen möchtet. Falls Ihr
+        noch eine Übernachtungsmöglichkeit sucht, könnt Ihr das auch hier
+        angeben.
     </p>
+    <InputForm client:load />
 </section>
