@@ -51,25 +51,23 @@ const ablauf = [
 ---
 
 <!-- Tagesablauf -->
-<section id="geschenke" class="text-center">
-    <div class="h-52 bg-primary-foreground py-8">
-        <div class="container"><Header2>Tagesablauf</Header2></div>
-        <p class="p-8">
-            Hier findet Ihr Informationeen zu den eineen Programmpunkten unserer
-            Hochzeit.
-        </p>
-    </div>
-    {
-        ablauf.map((item) => (
-            <div class="container p-8 flex flex-col justify-center items-center">
-                <div class="w-20 h-16 text-5xl flex justify-center items-center my-4 bg-primary-foreground">
-                    {item.icon}
-                </div>
-                <p class="my-4">
-                    {item.time} - {item.title}
-                </p>
-                <p>{item.description}</p>
+<div class="h-52 bg-primary-foreground py-8">
+    <div class="container"><Header2>Tagesablauf</Header2></div>
+    <p class="p-8">
+        Hier findet Ihr Informationeen zu den eineen Programmpunkten unserer
+        Hochzeit.
+    </p>
+</div>
+{
+    ablauf.map((item) => (
+        <div class="container p-8 flex flex-col justify-center items-center">
+            <div class="w-20 h-16 text-5xl flex justify-center items-center my-4 bg-primary-foreground">
+                {item.icon}
             </div>
-        ))
-    }
-</section>
+            <p class="my-4">
+                {item.time} - {item.title}
+            </p>
+            <p>{item.description}</p>
+        </div>
+    ))
+}
