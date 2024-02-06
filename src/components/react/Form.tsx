@@ -110,7 +110,7 @@ export function InputForm() {
                                 alt={gericht.name}
                                 className="w-28 h-28 rounded-lg object-cover"
                             />
-                            <label className="text-lg">{gericht.name}</label>
+                            <label className="text-md">{gericht.name}</label>
                             <input
                                 type="tel"
                                 className="w-14 h-14 rounded-lg pl-3"
@@ -128,8 +128,8 @@ export function InputForm() {
                 </div>
 
                 <div className="flex justify-center">
-                    <Button className="w-100" type="submit">
-                        Submit
+                    <Button className="w-96" type="submit">
+                        Senden
                     </Button>
                 </div>
             </form>

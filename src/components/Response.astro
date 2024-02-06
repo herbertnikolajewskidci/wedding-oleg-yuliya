@@ -7,11 +7,13 @@ import { InputForm } from "@/components/react/Form.tsx";
 <section id="rueckmeldung" class="container py-10">
     <Header2>Rückmeldung</Header2>
 
-    <p class="text-center my-5">
+    <p class="text-center text-lg my-5">
         Damit der Wirt genug für uns alle vorbereiten kann, wäre es gut, wenn
-        Ihr uns mitteilt wer alles kommt und was ihr essen möchtet. Falls Ihr
-        noch eine Übernachtungsmöglichkeit sucht, könnt Ihr das auch hier
+        Ihr uns mitteilt wer alles kommt und <b>was Ihr essen möchtet.</b> Falls
+        Ihr noch eine <b>Übernachtungsmöglichkeit</b> sucht, könnt Ihr das auch hier
         angeben.
     </p>
-    <InputForm client:load />
+    <div class="border-2 rounded-md p-2">
+        <InputForm client:load />
+    </div>
 </section>
