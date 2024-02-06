@@ -1,0 +1,68 @@
+---
+import { ModeToggle } from "@/components/react/ModeToogle.tsx";
+import { Separator } from "@/components/ui/separator";
+import { Button } from "./ui/button";
+
+const navItems = [
+    {
+        icon: "ℹ️",
+        label: "informationen",
+    },
+    {
+        icon: "🍽️",
+        label: "rueckmeldung",
+    },
+    {
+        icon: "🚗",
+        label: "anfahrt",
+    },
+    {
+        icon: "🎁",
+        label: "geschenke",
+    },
+];
+---
+
+<header>
+    <section
+        class="hero h-svh bg-hero bg-no-repeat bg-cover bg-center flex justify-center items-center text-secondary text-center text-shadow"
+    >
+        <div>
+            <h1 class="text-5xl font-yuliya font-bold">
+                Yuliya und Oleg heiraten!
+            </h1>
+
+            <Separator className={"bg-secondary  my-4"} />
+
+            <p class="text-2xl font-medium">Am 11. Mai ist es endlich soweit</p>
+        </div>
+
+        <nav
+            class="fixed
+            bottom-0
+            bg-primary
+            w-[100%]
+            h-20
+            flex
+            justify-around
+            items-center"
+        >
+            {
+                navItems.map((item) => (
+                    <a href={`#${item.label}`}>
+                        <Button variant="outline">
+                            <span class="text-2xl">{item.icon}</span>
+                        </Button>
+                    </a>
+                ))
+            }
+            <ModeToggle client:load />
+        </nav>
+    </section>
+
+    <style>
+        .text-shadow {
+            text-shadow: 0.125rem 0.125rem 0.125rem var(--border);
+        }
+    </style>
+</header>

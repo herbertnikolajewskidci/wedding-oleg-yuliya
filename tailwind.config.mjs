@@ -17,7 +17,13 @@ export default {
                 "2xl": "1400px",
             },
         },
+        fontFamily: {
+            yuliya: ["italianno", "handwriting"],
+        },
         extend: {
+            backgroundImage: {
+                hero: "url('https://images.pexels.com/photos/792777/pexels-photo-792777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+            },
             colors: {
                 border: "var(--border)",
                 input: "var(--input)",

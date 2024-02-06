@@ -1,68 +1,69 @@
+@import url(https://fonts.bunny.net/css?family=italianno:400);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
     :root {
-        --background: hsl(0 0% 100%);
-        --foreground: hsl(222.2 84% 4.9%);
+        --background: #efeee5;
+        --foreground: #5f544e;
 
-        --card: hsl(0 0% 100%);
-        --card-foreground: hsl(222.2 84% 4.9%);
+        --card: #ede8d5;
+        --card-foreground: #5f544e;
 
-        --popover: hsl(0 0% 100%);
-        --popover-foreground: hsl(222.2 84% 4.9%);
+        --popover: #ede8d5;
+        --popover-foreground: #5f544e;
 
-        --primary: hsl(222.2 47.4% 11.2%);
-        --primary-foreground: hsl(210 40% 98%);
+        --primary: #5f544e;
+        --primary-foreground: #ede8d5;
 
-        --secondary: hsl(210 40% 96.1%);
-        --secondary-foreground: hsl(222.2 47.4% 11.2%);
+        --secondary: #e7cd8d;
+        --secondary-foreground: #5f544e;
 
-        --muted: hsl(210 40% 96.1%);
-        --muted-foreground: hsl(215.4 16.3% 46.9%);
+        --muted: #efeee5;
+        --muted-foreground: #cdcab2;
 
-        --accent: hsl(210 40% 96.1%);
-        --accent-foreground: hsl(222.2 47.4% 11.2%);
+        --accent: #ede8d5;
+        --accent-foreground: #5f544e;
 
-        --destructive: hsl(0 84.2% 60.2%);
-        --destructive-foreground: hsl(210 40% 98%);
+        --destructive: #5f544e;
+        --destructive-foreground: #ede8d5;
 
-        --border: hsl(214.3 31.8% 91.4%);
-        --input: hsl(214.3 31.8% 91.4%);
-        --ring: hsl(222.2 84% 4.9%);
+        --border: #5f544e;
+        --input: #efeee5;
+        --ring: #5f544e;
 
-        --radius: hsl(0.5rem);
+        --radius: 0.5rem;
     }
 
     .dark {
-        --background: hsl(222.2 84% 4.9%);
-        --foreground: hsl(210 40% 98%);
+        --background: #5f544e;
+        --foreground: #ede8d5;
 
-        --card: hsl(222.2 84% 4.9%);
-        --card-foreground: hsl(210 40% 98%);
+        --card: #5f544e;
+        --card-foreground: #ede8d5;
 
-        --popover: hsl(222.2 84% 4.9%);
-        --popover-foreground: hsl(210 40% 98%);
+        --popover: #5f544e;
+        --popover-foreground: #ede8d5;
 
-        --primary: hsl(210 40% 98%);
-        --primary-foreground: hsl(222.2 47.4% 11.2%);
+        --primary: #ede8d5;
+        --primary-foreground: #5f544e;
 
-        --secondary: hsl(217.2 32.6% 17.5%);
-        --secondary-foreground: hsl(210 40% 98%);
+        --secondary: #5f544e;
+        --secondary-foreground: #e7cd8d;
 
-        --muted: hsl(217.2 32.6% 17.5%);
-        --muted-foreground: hsl(215 20.2% 65.1%);
+        --muted: #cdcab2;
+        --muted-foreground: #efeee5;
 
-        --accent: hsl(217.2 32.6% 17.5%);
-        --accent-foreground: hsl(210 40% 98%);
+        --accent: #c4a996;
+        --accent-foreground: #efeee5;
 
-        --destructive: hsl(0 62.8% 30.6%);
-        --destructive-foreground: hsl(210 40% 98%);
+        --destructive: #ede8d5;
+        --destructive-foreground: #5f544e;
 
-        --border: hsl(220, 17%, 7%);
-        --input: hsl(217.2 32.6% 17.5%);
-        --ring: hsl(212.7 26.8% 83.9%);
+        --border: #c4a996;
+        --input: #5f544e;
+        --ring: #d6d0c4;
     }
 }
 
@@ -72,5 +73,11 @@
     }
     body {
         @apply bg-background text-foreground;
+    }
+}
+
+@layer utilities {
+    .h-svh {
+        height: calc(100svh - 5rem);
     }
 }
