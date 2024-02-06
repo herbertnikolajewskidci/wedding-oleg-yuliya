@@ -1,2 +1,68 @@
+---
+import Header2 from "./Header2.astro";
+const adresse = [
+    {
+        label: "Adresse",
+        hausnummer: "52",
+        strasse: "Hauptstraße",
+        plz: "93102",
+        ort: "Pfatter",
+    },
+    {
+        label: "Parken",
+        hausnummer: "35",
+        strasse: "Hauptstraße",
+        plz: "93102",
+        ort: "Pfatter",
+    },
+];
+---
+
 <!-- Anfahrt & Parken -->
-<section class="container"><h2 id="anfahrt">Anfahrt & Parken</h2></section>
+<section id="anfahrt" class="py-5 text-center">
+    <div class="container"><Header2>Anfahrt & Parken</Header2></div>
+    {
+        adresse.map((item) => (
+            <div class="py-4">
+                <div class="my-4 bg-img-anfahrt">
+                    <iframe
+                        src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.073394073073!2d12.2550733157073!3d49.073073079413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4775e3f3e3f3f3f3%3A0x3e3f3f3f3f3f3f3f!2s${item.strasse}%20${item.hausnummer}%2C%20${item.plz}%20${item.ort}!5e0!3m2!1sde!2sde!4v1631530730003!5m2!1sde!2sde`}
+                        width="100%"
+                        height="250"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                    />
+                </div>
+                <h3 class="text-xl mb-2 font-semibold">{item.label}</h3>
+                <p>
+                    Adresse:{" "}
+                    <span class="text-secondary-foreground">
+                        {`${item.strasse} ${item.hausnummer}, ${item.plz} ${item.ort}`}
+                    </span>
+                </p>
+                <p>
+                    Google-Maps:{" "}
+                    <span class="underline">
+                        <a
+                            href={`https://www.google.com/maps?ll=48.970348,12.327353&z=15&t=m&hl=de&gl=DE&mapclient=embed&q=${item.strasse}+${item.hausnummer}+${item.plz}+${item.ort}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Hier klicken.
+                        </a>
+                    </span>
+                </p>
+            </div>
+        ))
+    }
+</section>
+
+<style>
+    .bg-img-anfahrt {
+        background-image: url("/anfahrt.png");
+        background-size: cover;
+        background-position: center;
+        height: 250px;
+    }
+</style>

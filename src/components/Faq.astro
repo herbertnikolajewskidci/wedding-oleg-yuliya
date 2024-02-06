@@ -1,4 +1,18 @@
+---
+import Header2 from "@/components/Header2.astro";
+import { AccordionDemo } from "./react/AccordionDemo.tsx";
+---
+
 <!-- FAQ - Accordion -->
-<section class="container">
-    <h2 id="geschenke">FAQ</h2>
+<section class="text-center">
+    <div class="h-52 bg-primary-foreground py-8">
+        <div class="container"><Header2>FAQ</Header2></div>
+        <p class="p-8">
+            Hier findest du häufig gestellte Fragen und die passenden Antworten
+            dazu.
+        </p>
+    </div>
+    <div class="container">
+        <AccordionDemo client:load />
+    </div>
 </section>

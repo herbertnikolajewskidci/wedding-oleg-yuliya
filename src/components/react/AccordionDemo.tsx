@@ -3,32 +3,32 @@ import {
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-} from "@/components/ui/accordion"
-  
-  export function AccordionDemo() {
+} from "@/components/ui/accordion";
+
+export function AccordionDemo() {
     return (
-      <Accordion type="single" collapsible className="w-full">
-        <AccordionItem value="item-1">
-          <AccordionTrigger>Is it accessible?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-2">
-          <AccordionTrigger>Is it styled?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It comes with default styles that matches the other
-            components&apos; aesthetic.
-          </AccordionContent>
-        </AccordionItem>
-        <AccordionItem value="item-3">
-          <AccordionTrigger>Is it animated?</AccordionTrigger>
-          <AccordionContent>
-            Yes. It&apos;s animated by default, but you can disable it if you
-            prefer.
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
-    )
-  }
-  
+        <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="item-1">
+                <AccordionTrigger>Was sollen wir schenken?</AccordionTrigger>
+                <AccordionContent>Am besten Geld!</AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+                <AccordionTrigger>
+                    Gibt es eine Geschenkeliste?
+                </AccordionTrigger>
+                <AccordionContent>
+                    Nein. Bitte schenkt uns Geld! Danke!
+                </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+                <AccordionTrigger>
+                    Ich essen kein Fleisch. Muss ich verhungern?
+                </AccordionTrigger>
+                <AccordionContent>
+                    Für vegetarisches Essen ist gesorgt und es gibt noch sehr
+                    viele verschiedene Beilagen.
+                </AccordionContent>
+            </AccordionItem>
+        </Accordion>
+    );
+}

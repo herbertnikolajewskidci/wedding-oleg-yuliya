@@ -1,7 +1,16 @@
 ---
+import Header2 from "@/components/Header2.astro";
+
 const currentYear = new Date().getFullYear();
 ---
 
-<footer>
-    <p>&copy; {currentYear}</p>
+<footer class="container py-16 bg-secondary h-96 text-center">
+    <h2 class="font-yuliya text-4xl">
+        Wir freuen uns an diesem besonderen Tag mit euch!
+    </h2>
+    <div class="py-4">
+        <p>Kontakt:</p>
+        <p>Telefon: 0176 12345678</p>
+        <p>E-Mail: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
+    </div>
 </footer>

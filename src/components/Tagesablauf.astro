@@ -1,2 +1,75 @@
+---
+import Header2 from "./Header2.astro";
+const ablauf = [
+    {
+        icon: "⛪",
+        time: "12:00",
+        title: "Trauung auf der Wiese",
+        description:
+            "Wir würden euch bitten, pünktlich an der Gaststätte zu erscheinen, damit wir pünktlich beginnen können.",
+    },
+    {
+        icon: "🥂",
+        time: "13:00",
+        title: "Empfang",
+        description:
+            "Nach der Trauung gibt es einen kleinen Empfang mit Sekt und Häppchen.",
+    },
+    {
+        icon: "🍽️",
+        time: "14:00",
+        title: "Mittagessen",
+        description:
+            "Wir haben uns für ein leckeres 3-Gänge-Menü entschieden. Wir hoffen, es schmeckt euch.",
+    },
+    {
+        icon: "🎉",
+        time: "16:00",
+        title: "Kaffee und Kuchen",
+        description: "Nach dem Essen gibt es Kaffee und Kuchen.",
+    },
+    {
+        icon: "🎶",
+        time: "18:00",
+        title: "Party",
+        description: "Wir feiern bis in die Nacht hinein.",
+    },
+    {
+        icon: "🍳",
+        time: "00:00",
+        title: "Mitternachtssnack",
+        description: "Für den kleinen Hunger zwischendurch.",
+    },
+    {
+        icon: "🛏️",
+        time: "02:00",
+        title: "Ende",
+        description:
+            "Wir hoffen, ihr hattet einen tollen Tag und seid gut nach Hause gekommen.",
+    },
+];
+---
+
 <!-- Tagesablauf -->
-<section class="container"><h2>Tagesablauf</h2></section>
+<section class="text-center">
+    <div class="h-52 bg-primary-foreground py-8">
+        <div class="container"><Header2>Tagesablauf</Header2></div>
+        <p class="p-8">
+            Hier findet Ihr Informationeen zu den eineen Programmpunkten unserer
+            Hochzeit.
+        </p>
+    </div>
+    {
+        ablauf.map((item) => (
+            <div class="container p-8 flex flex-col justify-center items-center">
+                <div class="w-20 h-16 text-5xl flex justify-center items-center my-4 bg-primary-foreground">
+                    {item.icon}
+                </div>
+                <p class="my-4">
+                    {item.time} - {item.title}
+                </p>
+                <p>{item.description}</p>
+            </div>
+        ))
+    }
+</section>

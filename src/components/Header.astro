@@ -6,19 +6,19 @@ import { Button } from "./ui/button";
 const navItems = [
     {
         icon: "ℹ️",
-        label: "informationen",
+        label: "#informationen",
     },
     {
         icon: "🍽️",
-        label: "rueckmeldung",
+        label: "#rueckmeldung",
     },
     {
         icon: "🚗",
-        label: "anfahrt",
+        label: "#anfahrt",
     },
     {
         icon: "🎁",
-        label: "geschenke",
+        label: "#geschenke",
     },
 ];
 ---
@@ -49,7 +49,7 @@ const navItems = [
         >
             {
                 navItems.map((item) => (
-                    <a href={`#${item.label}`}>
+                    <a href={`${item.label}`}>
                         <Button variant="outline">
                             <span class="text-2xl">{item.icon}</span>
                         </Button>
