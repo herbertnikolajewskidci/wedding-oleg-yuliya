@@ -5,65 +5,48 @@
 
 @layer base {
     :root {
-        --background: #efeee5;
-        --foreground: #5f544e;
-
-        --card: #ede8d5;
-        --card-foreground: #5f544e;
-
-        --popover: #ede8d5;
-        --popover-foreground: #5f544e;
-
-        --primary: #5f544e;
-        --primary-foreground: #ede8d5;
-
-        --secondary: #e7cd8d;
-        --secondary-foreground: #5f544e;
-
-        --muted: #efeee5;
-        --muted-foreground: #cdcab2;
-
-        --accent: #ede8d5;
-        --accent-foreground: #5f544e;
-
-        --destructive: #5f544e;
-        --destructive-foreground: #ede8d5;
-
-        --border: #5f544e;
-        --input: #efeee5;
-        --ring: #5f544e;
-
+        --background: #efeee5; /* White Dove */
+        --foreground: #5f544e; /* Stone Brown */
+        --card: #efeee5; /* White Dove */
+        --card-foreground: #5f544e; /* Stone Brown */
+        --popover: #efeee5; /* White Dove */
+        --popover-foreground: #5f544e; /* Stone Brown */
+        --primary: #c4a996; /* Venetian Portico */
+        --primary-foreground: #efeee5; /* White Dove */
+        --secondary: #ede8d5; /* Opaline */
+        --secondary-foreground: #c4a996; /* Venetian Portico */
+        --muted: #ede8d5; /* Opaline */
+        --muted-foreground: #cdcab2; /* Moon Shadow */
+        --accent: #ede8d5; /* Opaline */
+        --accent-foreground: #c4a996; /* Venetian Portico */
+        --destructive: #e7cd8d; /* Concord Ivory */
+        --destructive-foreground: #efeee5; /* White Dove */
+        --border: #ede8d5; /* Opaline */
+        --input: #ede8d5; /* Opaline */
+        --ring: #c4a996; /* Venetian Portico */
         --radius: 0.5rem;
     }
 
     .dark {
-        --background: #efeee5;
-        --foreground: #5f544e;
-
-        --card: #ede8d5;
-        --card-foreground: #5f544e;
-
-        --popover: #ede8d5;
-        --popover-foreground: #5f544e;
-
-        --primary: #5f544e;
-        --primary-foreground: #ede8d5;
-
-        --secondary: #e7cd8d;
-        --secondary-foreground: #5f544e;
-
-        --muted: #efeee5;
-        --muted-foreground: #cdcab2;
-
-        --accent: #ede8d5;
-        --accent-foreground: #5f544e;
-
-        --destructive: #5f544e;
-        --destructive-foreground: #ede8d5;
-
-        --border: #5f544e;
-        --input: #efeee5;
-        --ring: #5f544e;
+        --background: #5f544e; /* Stone Brown */
+        --foreground: #efeee5; /* White Dove */
+        --card: #5f544e; /* Stone Brown */
+        --card-foreground: #efeee5; /* White Dove */
+        --popover: #5f544e; /* Stone Brown */
+        --popover-foreground: #efeee5; /* White Dove */
+        --primary: #efeee5; /* White Dove */
+        --primary-foreground: #c4a996; /* Venetian Portico */
+        --secondary: #c4a996; /* Venetian Portico */
+        --secondary-foreground: #efeee5; /* White Dove */
+        --muted: #c4a996; /* Venetian Portico */
+        --muted-foreground: #cdcab2; /* Moon Shadow */
+        --accent: #c4a996; /* Venetian Portico */
+        --accent-foreground: #efeee5; /* White Dove */
+        --destructive: #e7cd8d; /* Concord Ivory */
+        --destructive-foreground: #efeee5; /* White Dove */
+        --border: #c4a996; /* Venetian Portico */
+        --input: #c4a996; /* Venetian Portico */
+        --ring: #ede8d5; /* Opaline */
     }
 }
 
