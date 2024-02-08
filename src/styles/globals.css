@@ -5,48 +5,50 @@
 
 @layer base {
     :root {
-        --background: #efeee5; /* White Dove */
-        --foreground: #5f544e; /* Stone Brown */
-        --card: #efeee5; /* White Dove */
-        --card-foreground: #5f544e; /* Stone Brown */
-        --popover: #efeee5; /* White Dove */
-        --popover-foreground: #5f544e; /* Stone Brown */
-        --primary: #c4a996; /* Venetian Portico */
-        --primary-foreground: #efeee5; /* White Dove */
-        --secondary: #ede8d5; /* Opaline */
-        --secondary-foreground: #c4a996; /* Venetian Portico */
-        --muted: #ede8d5; /* Opaline */
+
+        --background: #efeee5; /* White Dove  */
+        --foreground: #5f544e; /* Stone Brown  */
+        --card: #efeee5; /* White Dove  */
+        --card-foreground: #5f544e; /* Stone Brown  */
+        --popover: #efeee5; /* White Dove  */
+        --popover-foreground: #5f544e; /* Stone Brown  */
+        --primary: #5f544e; /* Stone Brown  */
+        --primary-foreground: #ede8d5; /* Opaline  */
+        --secondary: #e7cd8d; /* Concord Ivory */
+        --secondary-foreground: #5f544e; /* Stone Brown  */
+        --muted: #ede8d5; /* Opaline  */
         --muted-foreground: #cdcab2; /* Moon Shadow */
-        --accent: #ede8d5; /* Opaline */
-        --accent-foreground: #c4a996; /* Venetian Portico */
-        --destructive: #e7cd8d; /* Concord Ivory */
-        --destructive-foreground: #efeee5; /* White Dove */
-        --border: #ede8d5; /* Opaline */
-        --input: #ede8d5; /* Opaline */
-        --ring: #c4a996; /* Venetian Portico */
+        --accent: #e7cd8d; /* Concord Ivory */
+        --accent-foreground: #5f544e; /* Stone Brown  */
+        --destructive: hsl(0 84.2% 60.2%); /* Rottöne */
+        --destructive-foreground: #ede8d5; /* Opaline  */
+        --border: #cdcab2; /* Moon Shadow */
+        --input: #ede8d5; /* Opaline  */
+        --ring: #5f544e; /* Stone Brown  */
         --radius: 0.5rem;
     }
 
     .dark {
-        --background: #5f544e; /* Stone Brown */
-        --foreground: #efeee5; /* White Dove */
-        --card: #5f544e; /* Stone Brown */
-        --card-foreground: #efeee5; /* White Dove */
-        --popover: #5f544e; /* Stone Brown */
-        --popover-foreground: #efeee5; /* White Dove */
-        --primary: #efeee5; /* White Dove */
-        --primary-foreground: #c4a996; /* Venetian Portico */
-        --secondary: #c4a996; /* Venetian Portico */
-        --secondary-foreground: #efeee5; /* White Dove */
-        --muted: #c4a996; /* Venetian Portico */
-        --muted-foreground: #cdcab2; /* Moon Shadow */
-        --accent: #c4a996; /* Venetian Portico */
-        --accent-foreground: #efeee5; /* White Dove */
-        --destructive: #e7cd8d; /* Concord Ivory */
-        --destructive-foreground: #efeee5; /* White Dove */
-        --border: #c4a996; /* Venetian Portico */
-        --input: #c4a996; /* Venetian Portico */
-        --ring: #ede8d5; /* Opaline */
+      
+        --background: #5f544e; /* Stone Brown  */
+        --foreground: #ede8d5; /* Opaline  */
+        --card: #5f544e; /* Stone Brown  */
+        --card-foreground: #ede8d5; /* Opaline  */
+        --popover: #5f544e; /* Stone Brown  */
+        --popover-foreground: #ede8d5; /* Opaline  */
+        --primary: #ede8d5; /* Opaline  */
+        --primary-foreground: #5f544e; /* Stone Brown  */
+        --secondary: #5f544e; /* Stone Brown  */
+        --secondary-foreground: #e7cd8d; /* Concord Ivory */
+        --muted: #cdcab2; /* Moon Shadow */
+        --muted-foreground: #ede8d5; /* Opaline  */
+        --accent: #5f544e; /* Stone Brown  */
+        --accent-foreground: #ede8d5; /* Opaline  */
+        --destructive: hsl(0 62.8% 30.6%); /* Rottöne */
+        --destructive-foreground: #ede8d5; /* Opaline  */
+        --border: #ede8d5; /* Opaline  */
+        --input: #cdcab2; /* Moon Shadow */
+        --ring: #e7cd8d; /* Concord Ivory */
     }
 }
 
@@ -73,4 +75,8 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     shape-margin: 0.75rem;
+}
+
+.text-shadow {
+    text-shadow: 0.125rem 0.125rem 0.125rem var(--accent-foreground);
 }
