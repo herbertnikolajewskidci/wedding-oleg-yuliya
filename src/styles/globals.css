@@ -11,19 +11,19 @@
         --card-foreground: #5f544e; /* Stone Brown  */
         --popover: #efeee5; /* White Dove  */
         --popover-foreground: #5f544e; /* Stone Brown  */
-        --primary: hsl(240 5.9% 10%); /* Dunkelgrau */
+        --primary: #5f544e; /* Stone Brown  */
         --primary-foreground: #ede8d5; /* Opaline  */
-        --secondary: hsl(240 4.8% 95.9%); /* Hellgrau */
-        --secondary-foreground: hsl(240 5.9% 10%); /* Dunkelgrau */
-        --muted: hsl(240 4.8% 95.9%); /* Hellgrau */
-        --muted-foreground: hsl(240 3.8% 46.1%); /* Grau */
-        --accent: hsl(240 4.8% 95.9%); /* Hellgrau */
-        --accent-foreground: hsl(240 5.9% 10%); /* Dunkelgrau */
+        --secondary: #e7cd8d; /* Concord Ivory */
+        --secondary-foreground: #5f544e; /* Stone Brown  */
+        --muted: #ede8d5; /* Opaline  */
+        --muted-foreground: #cdcab2; /* Moon Shadow */
+        --accent: #e7cd8d; /* Concord Ivory */
+        --accent-foreground: #5f544e; /* Stone Brown  */
         --destructive: hsl(0 84.2% 60.2%); /* Rottöne */
         --destructive-foreground: #ede8d5; /* Opaline  */
-        --border: hsl(240 5.9% 90%); /* Hellgrau */
-        --input: hsl(240 5.9% 90%); /* Hellgrau */
-        --ring: hsl(240 5.9% 10%); /* Dunkelgrau */
+        --border: #cdcab2; /* Moon Shadow */
+        --input: #ede8d5; /* Opaline  */
+        --ring: #5f544e; /* Stone Brown  */
         --radius: 0.5rem;
     }
 
@@ -35,18 +35,18 @@
         --popover: #5f544e; /* Stone Brown  */
         --popover-foreground: #ede8d5; /* Opaline  */
         --primary: #ede8d5; /* Opaline  */
-        --primary-foreground: hsl(240 5.9% 10%); /* Dunkelgrau */
-        --secondary: hsl(240 3.7% 15.9%); /* Dunkelgrau */
-        --secondary-foreground: #ede8d5; /* Opaline  */
-        --muted: hsl(240 3.7% 15.9%); /* Dunkelgrau */
-        --muted-foreground: hsl(240 5% 64.9%); /* Grau */
-        --accent: hsl(240 3.7% 15.9%); /* Dunkelgrau */
+        --primary-foreground: #5f544e; /* Stone Brown  */
+        --secondary: #5f544e; /* Stone Brown  */
+        --secondary-foreground: #e7cd8d; /* Concord Ivory */
+        --muted: #cdcab2; /* Moon Shadow */
+        --muted-foreground: #ede8d5; /* Opaline  */
+        --accent: #5f544e; /* Stone Brown  */
         --accent-foreground: #ede8d5; /* Opaline  */
         --destructive: hsl(0 62.8% 30.6%); /* Rottöne */
         --destructive-foreground: #ede8d5; /* Opaline  */
-        --border: hsl(240 3.7% 15.9%); /* Dunkelgrau */
-        --input: hsl(240 3.7% 15.9%); /* Dunkelgrau */
-        --ring: hsl(240 4.9% 83.9%); /* Hellgrau */
+        --border: #ede8d5; /* Opaline  */
+        --input: #cdcab2; /* Moon Shadow */
+        --ring: #e7cd8d; /* Concord Ivory */
     }
 }
 
