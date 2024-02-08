@@ -5,48 +5,48 @@
 
 @layer base {
     :root {
-        --background: hsl(0 0% 100%); /* Weiß */
-        --foreground: hsl(240 10% 3.9%); /* Dunkelblau */
-        --card: hsl(0 0% 100%); /* Weiß */
-        --card-foreground: hsl(240 10% 3.9%); /* Dunkelblau */
-        --popover: hsl(0 0% 100%); /* Weiß */
-        --popover-foreground: hsl(240 10% 3.9%); /* Dunkelblau */
-        --primary: hsl(240 5.9% 10%); /* Dunkelgrau */
-        --primary-foreground: hsl(0 0% 98%); /* Weiß */
-        --secondary: hsl(240 4.8% 95.9%); /* Hellgrau */
-        --secondary-foreground: hsl(240 5.9% 10%); /* Dunkelgrau */
-        --muted: hsl(240 4.8% 95.9%); /* Hellgrau */
-        --muted-foreground: hsl(240 3.8% 46.1%); /* Grau */
-        --accent: hsl(240 4.8% 95.9%); /* Hellgrau */
-        --accent-foreground: hsl(240 5.9% 10%); /* Dunkelgrau */
-        --destructive: hsl(0 84.2% 60.2%); /* Rottöne */
-        --destructive-foreground: hsl(0 0% 98%); /* Weiß */
-        --border: hsl(240 5.9% 90%); /* Hellgrau */
-        --input: hsl(240 5.9% 90%); /* Hellgrau */
-        --ring: hsl(240 5.9% 10%); /* Dunkelgrau */
+        --background: #efeee5; /* White Dove */
+        --foreground: #5f544e; /* Stone Brown */
+        --card: #efeee5; /* White Dove */
+        --card-foreground: #5f544e; /* Stone Brown */
+        --popover: #efeee5; /* White Dove */
+        --popover-foreground: #5f544e; /* Stone Brown */
+        --primary: #c4a996; /* Venetian Portico */
+        --primary-foreground: #efeee5; /* White Dove */
+        --secondary: #ede8d5; /* Opaline */
+        --secondary-foreground: #c4a996; /* Venetian Portico */
+        --muted: #ede8d5; /* Opaline */
+        --muted-foreground: #cdcab2; /* Moon Shadow */
+        --accent: #ede8d5; /* Opaline */
+        --accent-foreground: #c4a996; /* Venetian Portico */
+        --destructive: #e7cd8d; /* Concord Ivory */
+        --destructive-foreground: #efeee5; /* White Dove */
+        --border: #ede8d5; /* Opaline */
+        --input: #ede8d5; /* Opaline */
+        --ring: #c4a996; /* Venetian Portico */
         --radius: 0.5rem;
     }
 
     .dark {
-        --background: hsl(240 10% 3.9%); /* Dunkelblau */
-        --foreground: hsl(0 0% 98%); /* Weiß */
-        --card: hsl(240 10% 3.9%); /* Dunkelblau */
-        --card-foreground: hsl(0 0% 98%); /* Weiß */
-        --popover: hsl(240 10% 3.9%); /* Dunkelblau */
-        --popover-foreground: hsl(0 0% 98%); /* Weiß */
-        --primary: hsl(0 0% 98%); /* Weiß */
-        --primary-foreground: hsl(240 5.9% 10%); /* Dunkelgrau */
-        --secondary: hsl(240 3.7% 15.9%); /* Dunkelgrau */
-        --secondary-foreground: hsl(0 0% 98%); /* Weiß */
-        --muted: hsl(240 3.7% 15.9%); /* Dunkelgrau */
-        --muted-foreground: hsl(240 5% 64.9%); /* Grau */
-        --accent: hsl(240 3.7% 15.9%); /* Dunkelgrau */
-        --accent-foreground: hsl(0 0% 98%); /* Weiß */
-        --destructive: hsl(0 62.8% 30.6%); /* Rottöne */
-        --destructive-foreground: hsl(0 0% 98%); /* Weiß */
-        --border: hsl(240 3.7% 15.9%); /* Dunkelgrau */
-        --input: hsl(240 3.7% 15.9%); /* Dunkelgrau */
-        --ring: hsl(240 4.9% 83.9%); /* Hellgrau */
+        --background: #5f544e; /* Stone Brown */
+        --foreground: #efeee5; /* White Dove */
+        --card: #5f544e; /* Stone Brown */
+        --card-foreground: #efeee5; /* White Dove */
+        --popover: #5f544e; /* Stone Brown */
+        --popover-foreground: #efeee5; /* White Dove */
+        --primary: #efeee5; /* White Dove */
+        --primary-foreground: #c4a996; /* Venetian Portico */
+        --secondary: #c4a996; /* Venetian Portico */
+        --secondary-foreground: #efeee5; /* White Dove */
+        --muted: #c4a996; /* Venetian Portico */
+        --muted-foreground: #cdcab2; /* Moon Shadow */
+        --accent: #c4a996; /* Venetian Portico */
+        --accent-foreground: #efeee5; /* White Dove */
+        --destructive: #e7cd8d; /* Concord Ivory */
+        --destructive-foreground: #efeee5; /* White Dove */
+        --border: #c4a996; /* Venetian Portico */
+        --input: #c4a996; /* Venetian Portico */
+        --ring: #ede8d5; /* Opaline */
     }
 }
 
