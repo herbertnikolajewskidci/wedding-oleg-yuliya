@@ -5,14 +5,14 @@
 
 @layer base {
     :root {
-        --background: hsl(0 0% 100%); /* Weiß */
-        --foreground: hsl(240 10% 3.9%); /* Dunkelblau */
-        --card: hsl(0 0% 100%); /* Weiß */
-        --card-foreground: hsl(240 10% 3.9%); /* Dunkelblau */
-        --popover: hsl(0 0% 100%); /* Weiß */
-        --popover-foreground: hsl(240 10% 3.9%); /* Dunkelblau */
+        --background: #efeee5; /* White Dove  */
+        --foreground: #5f544e; /* Stone Brown  */
+        --card: #efeee5; /* White Dove  */
+        --card-foreground: #5f544e; /* Stone Brown  */
+        --popover: #efeee5; /* White Dove  */
+        --popover-foreground: #5f544e; /* Stone Brown  */
         --primary: hsl(240 5.9% 10%); /* Dunkelgrau */
-        --primary-foreground: hsl(0 0% 98%); /* Weiß */
+        --primary-foreground: #ede8d5; /* Opaline  */
         --secondary: hsl(240 4.8% 95.9%); /* Hellgrau */
         --secondary-foreground: hsl(240 5.9% 10%); /* Dunkelgrau */
         --muted: hsl(240 4.8% 95.9%); /* Hellgrau */
@@ -20,7 +20,7 @@
         --accent: hsl(240 4.8% 95.9%); /* Hellgrau */
         --accent-foreground: hsl(240 5.9% 10%); /* Dunkelgrau */
         --destructive: hsl(0 84.2% 60.2%); /* Rottöne */
-        --destructive-foreground: hsl(0 0% 98%); /* Weiß */
+        --destructive-foreground: #ede8d5; /* Opaline  */
         --border: hsl(240 5.9% 90%); /* Hellgrau */
         --input: hsl(240 5.9% 90%); /* Hellgrau */
         --ring: hsl(240 5.9% 10%); /* Dunkelgrau */
@@ -28,22 +28,22 @@
     }
 
     .dark {
-        --background: hsl(240 10% 3.9%); /* Dunkelblau */
-        --foreground: hsl(0 0% 98%); /* Weiß */
-        --card: hsl(240 10% 3.9%); /* Dunkelblau */
-        --card-foreground: hsl(0 0% 98%); /* Weiß */
-        --popover: hsl(240 10% 3.9%); /* Dunkelblau */
-        --popover-foreground: hsl(0 0% 98%); /* Weiß */
-        --primary: hsl(0 0% 98%); /* Weiß */
+        --background: #5f544e; /* Stone Brown  */
+        --foreground: #ede8d5; /* Opaline  */
+        --card: #5f544e; /* Stone Brown  */
+        --card-foreground: #ede8d5; /* Opaline  */
+        --popover: #5f544e; /* Stone Brown  */
+        --popover-foreground: #ede8d5; /* Opaline  */
+        --primary: #ede8d5; /* Opaline  */
         --primary-foreground: hsl(240 5.9% 10%); /* Dunkelgrau */
         --secondary: hsl(240 3.7% 15.9%); /* Dunkelgrau */
-        --secondary-foreground: hsl(0 0% 98%); /* Weiß */
+        --secondary-foreground: #ede8d5; /* Opaline  */
         --muted: hsl(240 3.7% 15.9%); /* Dunkelgrau */
         --muted-foreground: hsl(240 5% 64.9%); /* Grau */
         --accent: hsl(240 3.7% 15.9%); /* Dunkelgrau */
-        --accent-foreground: hsl(0 0% 98%); /* Weiß */
+        --accent-foreground: #ede8d5; /* Opaline  */
         --destructive: hsl(0 62.8% 30.6%); /* Rottöne */
-        --destructive-foreground: hsl(0 0% 98%); /* Weiß */
+        --destructive-foreground: #ede8d5; /* Opaline  */
         --border: hsl(240 3.7% 15.9%); /* Dunkelgrau */
         --input: hsl(240 3.7% 15.9%); /* Dunkelgrau */
         --ring: hsl(240 4.9% 83.9%); /* Hellgrau */
