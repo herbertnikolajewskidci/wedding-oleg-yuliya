@@ -5,7 +5,6 @@
 
 @layer base {
     :root {
-
         --background: #efeee5; /* White Dove  */
         --foreground: #5f544e; /* Stone Brown  */
         --card: #efeee5; /* White Dove  */
@@ -14,7 +13,7 @@
         --popover-foreground: #5f544e; /* Stone Brown  */
         --primary: #5f544e; /* Stone Brown  */
         --primary-foreground: #ede8d5; /* Opaline  */
-        --secondary: #e7cd8d; /* Concord Ivory */
+        --secondary: #ede8d5; /* Opaline  */
         --secondary-foreground: #5f544e; /* Stone Brown  */
         --muted: #ede8d5; /* Opaline  */
         --muted-foreground: #cdcab2; /* Moon Shadow */
@@ -29,7 +28,6 @@
     }
 
     .dark {
-      
         --background: #5f544e; /* Stone Brown  */
         --foreground: #ede8d5; /* Opaline  */
         --card: #5f544e; /* Stone Brown  */
@@ -38,11 +36,11 @@
         --popover-foreground: #ede8d5; /* Opaline  */
         --primary: #ede8d5; /* Opaline  */
         --primary-foreground: #5f544e; /* Stone Brown  */
-        --secondary: #5f544e; /* Stone Brown  */
-        --secondary-foreground: #e7cd8d; /* Concord Ivory */
+        --secondary: #e7cd8d; /* Concord Ivory */
+        --secondary-foreground: #5f544e; /* Stone Brown  */
         --muted: #cdcab2; /* Moon Shadow */
         --muted-foreground: #ede8d5; /* Opaline  */
-        --accent: #5f544e; /* Stone Brown  */
+        --accent: #c4a996; /* Ventia Portico  */
         --accent-foreground: #ede8d5; /* Opaline  */
         --destructive: hsl(0 62.8% 30.6%); /* Rottöne */
         --destructive-foreground: #ede8d5; /* Opaline  */
@@ -78,5 +76,5 @@ img {
 }
 
 .text-shadow {
-    text-shadow: 0.125rem 0.125rem 0.125rem var(--accent-foreground);
+    text-shadow: 0.05rem 0.05rem 0.125rem var(--foreground);
 }
