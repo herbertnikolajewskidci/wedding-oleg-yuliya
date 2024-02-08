@@ -5,6 +5,7 @@
 
 @layer base {
     :root {
+
         --background: #efeee5; /* White Dove  */
         --foreground: #5f544e; /* Stone Brown  */
         --card: #efeee5; /* White Dove  */
@@ -28,6 +29,7 @@
     }
 
     .dark {
+      
         --background: #5f544e; /* Stone Brown  */
         --foreground: #ede8d5; /* Opaline  */
         --card: #5f544e; /* Stone Brown  */
