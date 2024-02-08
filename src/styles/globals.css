@@ -5,65 +5,48 @@
 
 @layer base {
     :root {
-        --background: #efeee5;
-        --foreground: #5f544e;
-
-        --card: #ede8d5;
-        --card-foreground: #5f544e;
-
-        --popover: #ede8d5;
-        --popover-foreground: #5f544e;
-
-        --primary: #5f544e;
-        --primary-foreground: #ede8d5;
-
-        --secondary: #e7cd8d;
-        --secondary-foreground: #5f544e;
-
-        --muted: #efeee5;
-        --muted-foreground: #cdcab2;
-
-        --accent: #ede8d5;
-        --accent-foreground: #5f544e;
-
-        --destructive: #5f544e;
-        --destructive-foreground: #ede8d5;
-
-        --border: #5f544e;
-        --input: #efeee5;
-        --ring: #5f544e;
-
+        --background: hsl(0 0% 100%); /* Weiß */
+        --foreground: hsl(240 10% 3.9%); /* Dunkelblau */
+        --card: hsl(0 0% 100%); /* Weiß */
+        --card-foreground: hsl(240 10% 3.9%); /* Dunkelblau */
+        --popover: hsl(0 0% 100%); /* Weiß */
+        --popover-foreground: hsl(240 10% 3.9%); /* Dunkelblau */
+        --primary: hsl(240 5.9% 10%); /* Dunkelgrau */
+        --primary-foreground: hsl(0 0% 98%); /* Weiß */
+        --secondary: hsl(240 4.8% 95.9%); /* Hellgrau */
+        --secondary-foreground: hsl(240 5.9% 10%); /* Dunkelgrau */
+        --muted: hsl(240 4.8% 95.9%); /* Hellgrau */
+        --muted-foreground: hsl(240 3.8% 46.1%); /* Grau */
+        --accent: hsl(240 4.8% 95.9%); /* Hellgrau */
+        --accent-foreground: hsl(240 5.9% 10%); /* Dunkelgrau */
+        --destructive: hsl(0 84.2% 60.2%); /* Rottöne */
+        --destructive-foreground: hsl(0 0% 98%); /* Weiß */
+        --border: hsl(240 5.9% 90%); /* Hellgrau */
+        --input: hsl(240 5.9% 90%); /* Hellgrau */
+        --ring: hsl(240 5.9% 10%); /* Dunkelgrau */
         --radius: 0.5rem;
     }
 
     .dark {
-        --background: #efeee5;
-        --foreground: #5f544e;
-
-        --card: #ede8d5;
-        --card-foreground: #5f544e;
-
-        --popover: #ede8d5;
-        --popover-foreground: #5f544e;
-
-        --primary: #5f544e;
-        --primary-foreground: #ede8d5;
-
-        --secondary: #e7cd8d;
-        --secondary-foreground: #5f544e;
-
-        --muted: #efeee5;
-        --muted-foreground: #cdcab2;
-
-        --accent: #ede8d5;
-        --accent-foreground: #5f544e;
-
-        --destructive: #5f544e;
-        --destructive-foreground: #ede8d5;
-
-        --border: #5f544e;
-        --input: #efeee5;
-        --ring: #5f544e;
+        --background: hsl(240 10% 3.9%); /* Dunkelblau */
+        --foreground: hsl(0 0% 98%); /* Weiß */
+        --card: hsl(240 10% 3.9%); /* Dunkelblau */
+        --card-foreground: hsl(0 0% 98%); /* Weiß */
+        --popover: hsl(240 10% 3.9%); /* Dunkelblau */
+        --popover-foreground: hsl(0 0% 98%); /* Weiß */
+        --primary: hsl(0 0% 98%); /* Weiß */
+        --primary-foreground: hsl(240 5.9% 10%); /* Dunkelgrau */
+        --secondary: hsl(240 3.7% 15.9%); /* Dunkelgrau */
+        --secondary-foreground: hsl(0 0% 98%); /* Weiß */
+        --muted: hsl(240 3.7% 15.9%); /* Dunkelgrau */
+        --muted-foreground: hsl(240 5% 64.9%); /* Grau */
+        --accent: hsl(240 3.7% 15.9%); /* Dunkelgrau */
+        --accent-foreground: hsl(0 0% 98%); /* Weiß */
+        --destructive: hsl(0 62.8% 30.6%); /* Rottöne */
+        --destructive-foreground: hsl(0 0% 98%); /* Weiß */
+        --border: hsl(240 3.7% 15.9%); /* Dunkelgrau */
+        --input: hsl(240 3.7% 15.9%); /* Dunkelgrau */
+        --ring: hsl(240 4.9% 83.9%); /* Hellgrau */
     }
 }
 
