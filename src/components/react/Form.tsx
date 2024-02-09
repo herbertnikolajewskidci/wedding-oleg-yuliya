@@ -19,10 +19,10 @@ import { toast } from "@/components/ui/use-toast";
 import { Checkbox } from "../ui/checkbox";
 
 const FormSchema = z.object({
-    username: z.string().min(2, {
+    gaeste: z.string().min(2, {
         message: "Bitte gib mindestens einen Namen an.",
     }),
-    unterkunft: z.boolean(),
+    brauchtUnterkunft: z.boolean(),
     schnitzel: z.string().min(0),
     schweinebraten: z.string().min(0),
     haehnchen: z.string().min(0),
@@ -32,8 +32,8 @@ export function InputForm() {
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
         defaultValues: {
-            username: "",
-            unterkunft: false,
+            gaeste: "",
+            brauchtUnterkunft: false,
             schnitzel: String("0"),
             schweinebraten: String("0"),
             haehnchen: String("0"),
@@ -42,7 +42,7 @@ export function InputForm() {
 
     function onSubmit(data: z.infer<typeof FormSchema>) {
         toast({
-            title: "You submitted the following values:",
+            title: "Danke, dass Du bescheid gegeben hast! Wir haben folgende Nachricht erhalten.",
             description: (
                 <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
                     <code className="text-white">
@@ -51,6 +51,7 @@ export function InputForm() {
                 </pre>
             ),
         });
+        form.reset();
     }
 
     const gerichte = [
@@ -93,7 +94,7 @@ export function InputForm() {
                     <div>
                         <FormField
                             control={form.control}
-                            name="username"
+                            name="gaeste"
                             render={({ field }) => (
                                 <FormItem>
                                     <FormControl>
@@ -110,7 +111,7 @@ export function InputForm() {
                     <div>
                         <FormField
                             control={form.control}
-                            name="unterkunft"
+                            name="brauchtUnterkunft"
                             render={({ field }) => (
                                 <FormItem className="flex flex-row items-start space-x-3">
                                     <FormControl>
