@@ -34,9 +34,9 @@ export function InputForm() {
         defaultValues: {
             username: "",
             unterkunft: false,
-            schnitzel: "",
-            schweinebraten: "",
-            haehnchen: "",
+            schnitzel: "0",
+            schweinebraten: "0",
+            haehnchen: "0",
         },
     });
 
