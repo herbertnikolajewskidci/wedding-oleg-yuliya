@@ -23,9 +23,9 @@ const FormSchema = z.object({
         message: "Bitte gib mindestens einen Namen an.",
     }),
     unterkunft: z.boolean(),
-    schnitzel: z.string(),
-    schweinebraten: z.string(),
-    haehnchen: z.string(),
+    schnitzel: z.string().min(0),
+    schweinebraten: z.string().min(0),
+    haehnchen: z.string().min(0),
 });
 
 export function InputForm() {
@@ -34,9 +34,9 @@ export function InputForm() {
         defaultValues: {
             username: "",
             unterkunft: false,
-            schnitzel: "0",
-            schweinebraten: "0",
-            haehnchen: "0",
+            schnitzel: String("0"),
+            schweinebraten: String("0"),
+            haehnchen: String("0"),
         },
     });
 
@@ -136,7 +136,12 @@ export function InputForm() {
                             <FormField
                                 key={index}
                                 control={form.control}
-                                name={gericht.label}
+                                name={
+                                    gericht.label as
+                                        | "schnitzel"
+                                        | "schweinebraten"
+                                        | "haehnchen"
+                                }
                                 render={({ field }) => (
                                     <FormItem className="flex justify-between items-center gap-4 flex-nowrap break-words">
                                         <img
