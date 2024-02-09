@@ -23,12 +23,9 @@ const FormSchema = z.object({
         message: "Bitte gib mindestens einen Namen an.",
     }),
     unterkunft: z.boolean(),
-    essen: z.array(
-        z.object({
-            name: z.string(),
-            anzahl: z.number().int().min(0),
-        })
-    ),
+    schnitzel: z.string(),
+    schweinebraten: z.string(),
+    haehnchen: z.string(),
 });
 
 export function InputForm() {
@@ -37,11 +34,9 @@ export function InputForm() {
         defaultValues: {
             username: "",
             unterkunft: false,
-            essen: [
-                { name: "Schnitzel", anzahl: 0 },
-                { name: "Schweinebraten", anzahl: 0 },
-                { name: "Hähnchen", anzahl: 0 },
-            ],
+            schnitzel: "",
+            schweinebraten: "",
+            haehnchen: "",
         },
     });
 
@@ -59,22 +54,34 @@ export function InputForm() {
     }
 
     const gerichte = [
-        { name: "Schnitzel mit Pommes", imgSrc: "/schnitzel.jpeg" },
-        { name: "Schweinebraten mit Knödel", imgSrc: "/schweinebraten.jpeg" },
-        { name: "Hähnchenschenkel", imgSrc: "/haehnchen.jpeg" },
+        {
+            name: "Schnitzel mit Pommes",
+            imgSrc: "/schnitzel.jpeg",
+            label: "schnitzel",
+        },
+        {
+            name: "Schweinebraten mit Knödel",
+            imgSrc: "/schweinebraten.jpeg",
+            label: "schweinebraten",
+        },
+        {
+            name: "Hähnchenschenkel",
+            imgSrc: "/haehnchen.jpeg",
+            label: "haehnchen",
+        },
     ];
 
-    const [bestellungen, setBestellungen] = useState([
-        { name: "Schnitzel", anzahl: 0 },
-        { name: "Schweinebraten", anzahl: 0 },
-        { name: "Hähnchen", anzahl: 0 },
-    ]);
+    // const [bestellungen, setBestellungen] = useState([
+    //     { name: "Schnitzel mit Pommes", anzahl: 0 },
+    //     { name: "Schweinebraten mit Knödel", anzahl: 0 },
+    //     { name: "Hähnchenschenkel", anzahl: 0 },
+    // ]);
 
-    const handleAnzahlAendern = (index: number, anzahl: number) => {
-        const neueBestellungen = [...bestellungen];
-        neueBestellungen[index].anzahl = anzahl;
-        setBestellungen(neueBestellungen);
-    };
+    // const handleAnzahlAendern = (index: number, anzahl: number) => {
+    //     const neueBestellungen = [...bestellungen];
+    //     neueBestellungen[index].anzahl = anzahl;
+    //     setBestellungen(neueBestellungen);
+    // };
 
     return (
         <>
@@ -93,7 +100,7 @@ export function InputForm() {
                                         <Input
                                             placeholder="Name bzw. Familie..."
                                             {...field}
-                                            className="bg-white"
+                                            className="bg-accent placeholder:text-accent-foreground"
                                         />
                                     </FormControl>
                                 </FormItem>
@@ -110,7 +117,7 @@ export function InputForm() {
                                         <Checkbox
                                             checked={field.value}
                                             onCheckedChange={field.onChange}
-                                            className="w-8 h-8 bg-white"
+                                            className="w-8 h-8 bg-accent placeholder:text-accent-foreground"
                                         />
                                     </FormControl>
                                     <div className="space-y-1 leading-none">
@@ -126,36 +133,44 @@ export function InputForm() {
 
                     <div className="flex flex-col gap-2">
                         {gerichte.map((gericht, index) => (
-                            <div
+                            <FormField
                                 key={index}
-                                className="flex justify-between items-center gap-4 flex-nowrap break-words"
-                            >
-                                <img
-                                    src={gericht.imgSrc}
-                                    alt={gericht.name}
-                                    className="w-28 h-28 rounded-lg object-cover"
-                                />
-                                <label className="text-md">
-                                    {gericht.name}
-                                </label>
-                                <input
-                                    type="tel"
-                                    className="w-14 h-14 rounded-lg pl-3"
-                                    value={bestellungen[index].anzahl}
-                                    placeholder="0"
-                                    onChange={(e) =>
-                                        handleAnzahlAendern(
-                                            index,
-                                            Number(e.target.value)
-                                        )
-                                    }
-                                />
-                            </div>
+                                control={form.control}
+                                name={gericht.label}
+                                render={({ field }) => (
+                                    <FormItem className="flex justify-between items-center gap-4 flex-nowrap break-words">
+                                        <img
+                                            src={gericht.imgSrc}
+                                            alt={gericht.name}
+                                            className="w-28 h-28 rounded-lg object-cover"
+                                        />
+                                        <FormLabel className="text-md">
+                                            {gericht.name}
+                                        </FormLabel>
+                                        <FormControl>
+                                            <Input
+                                                type="tel"
+                                                placeholder="0"
+                                                {...field}
+                                                // onChange={(e) =>
+                                                //     handleAnzahlAendern(
+                                                //         index,
+                                                //         Number(e.target.value)
+                                                //     )
+                                                // }
+                                                className="bg-accent placeholder:text-accent-foreground w-14 h-14 rounded-lg pl-3"
+                                            />
+                                        </FormControl>
+                                    </FormItem>
+                                )}
+                            />
                         ))}
                     </div>
-
                     <div className="flex justify-center">
-                        <Button className="w-96" type="submit">
+                        <Button
+                            className="w-96 bg-accent text-accent-foreground"
+                            type="submit"
+                        >
                             Senden
                         </Button>
                     </div>
