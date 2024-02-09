@@ -7,9 +7,16 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
+import {
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
+import { Checkbox } from "../ui/checkbox";
 
 const FormSchema = z.object({
     username: z.string().min(2, {
@@ -93,21 +100,30 @@ export function InputForm() {
                             )}
                         />
                     </div>
-
-                    <div className="flex items-center space-x-3">
-                        <input
-                            type="checkbox"
+                    <div>
+                        <FormField
+                            control={form.control}
                             name="unterkunft"
-                            id="unterkunft"
-                            className="w-8 h-8 text-primary  border-secondary rounded focus:ring-primary dark:focus:ring-primary dark:ring-offset-primary focus:ring-2 dark:bg-primary dark:border-secondary"
+                            render={({ field }) => (
+                                <FormItem className="flex flex-row items-start space-x-3">
+                                    <FormControl>
+                                        <Checkbox
+                                            checked={field.value}
+                                            onCheckedChange={field.onChange}
+                                            className="w-8 h-8 bg-white"
+                                        />
+                                    </FormControl>
+                                    <div className="space-y-1 leading-none">
+                                        <FormLabel className="font-bold peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                                            Ich benötige eine
+                                            Übernachtungsmöglichkeit
+                                        </FormLabel>
+                                    </div>
+                                </FormItem>
+                            )}
                         />
-                        <label
-                            htmlFor="unterkunft"
-                            className="font-bold leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                            Ich benötige eine Übernachtungsmöglichkeit
-                        </label>
                     </div>
+
                     <div className="flex flex-col gap-2">
                         {gerichte.map((gericht, index) => (
                             <div
