@@ -46,8 +46,15 @@ const navItems = [
             h-20
             flex
             justify-around
-            items-center"
+            items-center
+            lg:justify-center
+            lg:gap-4"
         >
+            <a class="hidden lg:inline" href="#">
+                <Button variant="outline">
+                    <span class="text-2xl font-yuliya text-primary">Y&O</span>
+                </Button>
+            </a>
             {
                 navItems.map((item) => (
                     <a href={`${item.label}`}>
@@ -57,6 +64,7 @@ const navItems = [
                     </a>
                 ))
             }
+
             <!-- <ModeToggle client:load /> -->
         </nav>
     </section>
