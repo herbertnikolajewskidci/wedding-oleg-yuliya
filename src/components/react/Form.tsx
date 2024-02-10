@@ -61,28 +61,26 @@ export function InputForm() {
             label: "schnitzel",
         },
         {
-            name: "Schweinebraten mit Knödel",
+            name: (
+                <span>
+                    Schweinebra<span className="min-[306px]:hidden">-</span>
+                    ten mit Knödel
+                </span>
+            ),
             imgSrc: "/schweinebraten.jpeg",
             label: "schweinebraten",
         },
         {
-            name: "Hähnchenschenkel",
+            name: (
+                <span>
+                    Hähnchen<span className="min-[321px]:hidden">-</span>
+                    schenkel
+                </span>
+            ),
             imgSrc: "/haehnchen.jpeg",
             label: "haehnchen",
         },
     ];
-
-    // const [bestellungen, setBestellungen] = useState([
-    //     { name: "Schnitzel mit Pommes", anzahl: 0 },
-    //     { name: "Schweinebraten mit Knödel", anzahl: 0 },
-    //     { name: "Hähnchenschenkel", anzahl: 0 },
-    // ]);
-
-    // const handleAnzahlAendern = (index: number, anzahl: number) => {
-    //     const neueBestellungen = [...bestellungen];
-    //     neueBestellungen[index].anzahl = anzahl;
-    //     setBestellungen(neueBestellungen);
-    // };
 
     return (
         <>
@@ -123,8 +121,11 @@ export function InputForm() {
                                     </FormControl>
                                     <div className="space-y-1 leading-none">
                                         <FormLabel className="font-bold peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                                            Ich benötige eine
-                                            Übernachtungsmöglichkeit
+                                            Ich benötige eine Übernachtungs
+                                            <span className="min-[303px]:hidden">
+                                                -
+                                            </span>
+                                            möglichkeit
                                         </FormLabel>
                                     </div>
                                 </FormItem>
@@ -147,8 +148,8 @@ export function InputForm() {
                                     <FormItem className="flex justify-between items-center gap-4 flex-nowrap break-words">
                                         <img
                                             src={gericht.imgSrc}
-                                            alt={gericht.name}
-                                            className="w-28 h-28 rounded-lg object-cover"
+                                            alt={gericht.label}
+                                            className="size-7 min-[340px]:size-14 sm:size-28 rounded-lg object-cover"
                                         />
                                         <FormLabel className="text-md">
                                             {gericht.name}
@@ -158,13 +159,7 @@ export function InputForm() {
                                                 type="tel"
                                                 placeholder="0"
                                                 {...field}
-                                                // onChange={(e) =>
-                                                //     handleAnzahlAendern(
-                                                //         index,
-                                                //         Number(e.target.value)
-                                                //     )
-                                                // }
-                                                className="bg-accent placeholder:text-accent-foreground w-14 h-14 rounded-lg pl-3"
+                                                className="bg-accent placeholder:text-accent-foreground size-10 min-[340px]:size-14 rounded-lg pl-3"
                                             />
                                         </FormControl>
                                     </FormItem>
