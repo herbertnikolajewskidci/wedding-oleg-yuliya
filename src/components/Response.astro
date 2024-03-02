@@ -1,6 +1,7 @@
 ---
 import H2 from "./H2.astro";
 import { InputForm } from "@/components/react/Form.tsx";
+import { DateRangePicker } from "@/components/react/DateRangePicker.tsx";
 ---
 
 <!-- Rückmeldungsformular -->
@@ -15,6 +16,7 @@ import { InputForm } from "@/components/react/Form.tsx";
     </p>
     <div class="border-2 rounded-md p-2 max-w-3xl mx-auto">
         <InputForm client:load />
+        <DateRangePicker client:load />
     </div>
     <p class="py-4 max-w-3xl mx-auto">
         * Für vegetarisches Essen ist gesorgt und es gibt noch sehr viele
