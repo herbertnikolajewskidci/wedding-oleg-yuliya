@@ -25,6 +25,11 @@
         --input: #ede8d5; /* Opaline  */
         --ring: #5f544e; /* Stone Brown  */
         --radius: 0.5rem;
+
+        --hero0: url("/image0.webp");
+        --hero1: url("/image1.webp");
+        --hero2: url("/image2.webp");
+        --hero3: url("/image3.webp");
     }
 
     .dark {

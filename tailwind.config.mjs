@@ -22,7 +22,10 @@ export default {
         },
         extend: {
             backgroundImage: {
-                hero: "url('https://images.pexels.com/photos/792777/pexels-photo-792777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+                "hero-0": "var(--hero0)",
+                "hero-1": "var(--hero1)",
+                "hero-2": "var(--hero2)",
+                "hero-3": "var(--hero3)",
             },
             colors: {
                 border: "var(--border)",

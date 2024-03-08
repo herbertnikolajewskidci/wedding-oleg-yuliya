@@ -2,7 +2,6 @@
 
 import { Toaster } from "@/components/ui/toaster";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -17,6 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
 import { Checkbox } from "../ui/checkbox";
+import { DateRangePicker } from "./DateRangePicker";
 
 const FormSchema = z.object({
     gaeste: z.string().min(2, {
@@ -132,6 +132,19 @@ export function InputForm() {
                             )}
                         />
                     </div>
+                    <div>
+                        <FormField
+                            control={form.control}
+                            name="zeitraum"
+                            render={({ field }) => (
+                                <FormItem className="flex flex-row items-start space-x-3">
+                                    <FormControl>
+                                        <DateRangePicker />
+                                    </FormControl>
+                                </FormItem>
+                            )}
+                        />
+                    </div>
 
                     <div className="flex flex-col gap-2">
                         {gerichte.map((gericht, index) => (
@@ -181,3 +194,5 @@ export function InputForm() {
         </>
     );
 }
+
+// To Do: H#hnchen-Schnitzel hinzufügen, Beilagen unten hinzufügen,

@@ -2,6 +2,7 @@
 // import { ModeToggle } from "@/components/react/ModeToogle.tsx";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "./ui/button";
+import { CostumCarousel } from "./react/Carousel.tsx";
 
 const navItems = [
     {
@@ -25,17 +26,46 @@ const navItems = [
 
 <header>
     <section
-        class="hero h-svh lg:mt-20 bg-hero bg-no-repeat bg-cover bg-center flex justify-center items-center text-accent text-center text-shadow"
+        class="hero h-[50vh] lg:mt-20 overflow-hidden bg-cover bg-center"
+        style="background-image: url('/Banner.jpeg')"
     >
-        <div>
-            <h1 class="text-5xl font-yuliya font-bold">
-                Yuliya und Oleg heiraten!
-            </h1>
-
-            <Separator className={"bg-accent  my-4"} />
-
-            <p class="text-4xl font-yuliya">Am 11. Mai ist es endlich soweit</p>
+        <div class="md:hidden">
+            <CostumCarousel client:load />
         </div>
+        <!-- <div class="animate-bounce">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="64"
+                height="64"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                filter="url(#shadow)"
+            >
+                <defs>
+                    <filter
+                        id="shadow"
+                        x="-20%"
+                        y="-20%"
+                        width="140%"
+                        height="140%"
+                    >
+                        <feOffset result="offOut" in="SourceAlpha" dx="5" dy="5"
+                        ></feOffset>
+                        <feGaussianBlur
+                            result="blurOut"
+                            in="offOut"
+                            stdDeviation="3"></feGaussianBlur>
+                        <feBlend in="SourceGraphic" in2="blurOut" mode="normal"
+                        ></feBlend>
+                    </filter>
+                </defs>
+                <path d="M6 9l6 6 6-6"></path>
+            </svg>
+        </div> -->
 
         <nav
             class="fixed
