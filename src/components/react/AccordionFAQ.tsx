@@ -29,6 +29,25 @@ export function AccordionFAQ() {
                     viele verschiedene Beilagen.
                 </AccordionContent>
             </AccordionItem>
+            <AccordionItem value="item-4">
+                <AccordionTrigger>
+                    Ich benötige eine Übernachtungsmöglichkeit. Wo kann ich ein
+                    Hotel oder Gasthaus in der nähe finden?
+                </AccordionTrigger>
+                <AccordionContent>
+                    Wir werden für alle, welche eine Übernachtungsmöglichkeit
+                    benötigen, ein Hotelzimmer in der nähe buchen. Bitte teilt
+                    uns{" "}
+                    <a className="underline font-bold" href="#rueckmeldung">
+                        hier
+                    </a>{" "}
+                    mit, ob ihr eine Übernachtungsmöglichkeit benötigt. Wir
+                    buchen bei folgendem Gasthaus:{" "}
+                    <a href="https://www.beim-butz.de/">
+                        https://www.beim-butz.de/
+                    </a>
+                </AccordionContent>
+            </AccordionItem>
         </Accordion>
     );
 }
