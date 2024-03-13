@@ -3,6 +3,7 @@ import H2 from "./H2.astro";
 const adresse = [
     {
         label: "Adresse",
+        name: "Gasthaus Posthorn",
         hausnummer: "52",
         strasse: "Hauptstraße",
         plz: "93102",
@@ -10,11 +11,17 @@ const adresse = [
     },
     {
         label: "Parken",
-        hausnummer: "35",
-        strasse: "Hauptstraße",
+        hausnummer: "",
+        name: "Parkplatz",
+        strasse: "TV Geisling",
         plz: "93102",
         ort: "Pfatter",
     },
+];
+
+const adressenURL = [
+    `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10476.457320443178!2d12.327353!3d48.970348!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479fdc21f2855555%3A0x39c2e18f70e73bc4!2sGasthaus%20Posthorn!5e0!3m2!1sde!2sde!4v1710364408040!5m2!1sde!2sde`,
+    `https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d307.7343245618443!2d12.326873755221198!3d48.971629232097605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDjCsDU4JzE3LjYiTiAxMsKwMTknMzYuOSJF!5e0!3m2!1sde!2sde!4v1710363383509!5m2!1sde!2sde`,
 ];
 ---
 
@@ -22,11 +29,11 @@ const adresse = [
 <section id="anfahrt" class="py-5 text-center">
     <div class="container"><H2>Anfahrt & Parken</H2></div>
     {
-        adresse.map((item) => (
+        adresse.map((item, index) => (
             <div class="py-4">
                 <div class="my-4 bg-img-anfahrt">
                     <iframe
-                        src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.073394073073!2d12.2550733157073!3d49.073073079413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4775e3f3e3f3f3f3%3A0x3e3f3f3f3f3f3f3f!2s${item.strasse}%20${item.hausnummer}%2C%20${item.plz}%20${item.ort}!5e0!3m2!1sde!2sde!4v1631530730003!5m2!1sde!2sde`}
+                        src={adressenURL[index]}
                         width="100%"
                         height="250"
                         style="border:0;"
@@ -38,14 +45,14 @@ const adresse = [
                 <p>
                     Adresse:{" "}
                     <span class="text-secondary-foreground">
-                        {`${item.strasse} ${item.hausnummer}, ${item.plz} ${item.ort}`}
+                        {`${item.name}, ${item.strasse} ${item.hausnummer}, ${item.plz} ${item.ort}`}
                     </span>
                 </p>
                 <p>
                     Google-Maps:{" "}
                     <span class="underline">
                         <a
-                            href={`https://www.google.com/maps?ll=48.970348,12.327353&z=15&t=m&hl=de&gl=DE&mapclient=embed&q=${item.strasse}+${item.hausnummer}+${item.plz}+${item.ort}`}
+                            href={`https://www.google.com/maps?ll=48.970348,12.327353&z=15&t=m&hl=de&gl=DE&mapclient=embed&q=${index !== 1 ? item.name : ""}+${item.strasse}+${item.hausnummer}+${item.plz}+${item.ort}`}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
