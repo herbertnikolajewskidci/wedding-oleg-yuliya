@@ -100,7 +100,7 @@ export function InputForm() {
                 </span>
             ),
             imgSrc: "/haehnchenschnitzel.webp",
-            label: "haehnchen Schnitzel",
+            label: "haehnchenSchnitzel",
         },
     ];
 
