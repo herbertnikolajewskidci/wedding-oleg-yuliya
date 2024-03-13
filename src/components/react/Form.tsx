@@ -48,7 +48,11 @@ export function InputForm() {
         },
     });
 
-    function onSubmit(data: z.infer<typeof FormSchema>) {
+    async function onSubmit(data: z.infer<typeof FormSchema>) {
+        await fetch("/api/send", {
+            method: "POST",
+            body: JSON.stringify(data),
+        });
         toast({
             title: "Danke, dass Du bescheid gegeben hast! Wir haben folgende Nachricht erhalten.",
             description: (
@@ -195,8 +199,9 @@ export function InputForm() {
                     </div>
                     {form.getValues().brauchtUnterkunft && (
                         <div className="flex flex-col gap-1">
-                            {uebernachtungsMoeglichkeiten.map((day) => (
+                            {uebernachtungsMoeglichkeiten.map((day, index) => (
                                 <FormField
+                                    key={index}
                                     control={form.control}
                                     name={
                                         day.name as "do-so" | "fr-so" | "sa-so"
