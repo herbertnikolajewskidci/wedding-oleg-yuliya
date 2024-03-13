@@ -14,9 +14,9 @@ import {
     FormLabel,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+// import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { toast } from "@/components/ui/use-toast";
 import { Checkbox } from "../ui/checkbox";
-import { DateRangePicker } from "./DateRangePicker";
 
 const FormSchema = z.object({
     gaeste: z.string().min(2, {
@@ -27,6 +27,9 @@ const FormSchema = z.object({
     schweinebraten: z.string().min(0),
     haehnchen: z.string().min(0),
     haehnchenSchnitzel: z.string().min(0),
+    "do-so": z.boolean(),
+    "fr-so": z.boolean(),
+    "sa-so": z.boolean(),
 });
 
 export function InputForm() {
@@ -35,6 +38,9 @@ export function InputForm() {
         defaultValues: {
             gaeste: "",
             brauchtUnterkunft: false,
+            "do-so": false,
+            "fr-so": false,
+            "sa-so": false,
             schnitzel: String("0"),
             haehnchenSchnitzel: String("0"),
             schweinebraten: String("0"),
@@ -92,6 +98,12 @@ export function InputForm() {
             imgSrc: "/haehnchenschnitzel.webp",
             label: "haehnchen Schnitzel",
         },
+    ];
+
+    const uebernachtungsMoeglichkeiten = [
+        { name: "do-so", day: "Donnerstag" },
+        { name: "fr-so", day: "Freitag" },
+        { name: "sa-so", day: "Samstag" },
     ];
 
     return (
@@ -181,19 +193,36 @@ export function InputForm() {
                             )}
                         />
                     </div>
-                    {/* <div>
-                        <FormField
-                            control={form.control}
-                            name="zeitraum"
-                            render={({ field }) => (
-                                <FormItem className="flex flex-row items-start space-x-3">
-                                    <FormControl>
-                                        <DateRangePicker />
-                                    </FormControl>
-                                </FormItem>
-                            )}
-                        />
-                    </div> */}
+                    {form.getValues().brauchtUnterkunft && (
+                        <div className="flex flex-col gap-1">
+                            {uebernachtungsMoeglichkeiten.map((day) => (
+                                <FormField
+                                    control={form.control}
+                                    name={
+                                        day.name as "do-so" | "fr-so" | "sa-so"
+                                    }
+                                    render={({ field }) => (
+                                        <FormItem className="flex flex-row items-start space-x-3">
+                                            <FormControl>
+                                                <Checkbox
+                                                    checked={field.value}
+                                                    onCheckedChange={
+                                                        field.onChange
+                                                    }
+                                                    className="w-8 h-8 bg-accent placeholder:text-accent-foreground"
+                                                />
+                                            </FormControl>
+                                            <div className="space-y-1 leading-none">
+                                                <FormLabel className="peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                                                    von {day.day} bis Sonntag
+                                                </FormLabel>
+                                            </div>
+                                        </FormItem>
+                                    )}
+                                />
+                            ))}
+                        </div>
+                    )}
                     <div className="flex justify-center">
                         <Button
                             className="w-96 bg-accent text-accent-foreground"
