@@ -5,12 +5,12 @@ import { Resend } from "resend";
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
 export const POST: APIRoute = async ({ request }) => {
-    const reqBody = await request.json();
+    const reqData = await request.json();
     const { data, error } = await resend.emails.send({
         from: "Acme <onboarding@resend.dev>",
         to: import.meta.env.EMAIL_SENDER,
         subject: "Hochzeit Zusage",
-        react: EmailTemplate({ ...reqBody }),
+        react: EmailTemplate({ ...reqData }),
     } as any);
 
     if (error) {
