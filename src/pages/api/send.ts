@@ -1,4 +1,4 @@
-import { EmailTemplate } from "@/components/mail-template.tsx";
+import { EmailTemplate } from "@/components/react/mail-template.tsx";
 import type { APIRoute } from "astro";
 import { Resend } from "resend";
 
@@ -9,7 +9,7 @@ export const POST: APIRoute = async ({ request }) => {
     const { data, error } = await resend.emails.send({
         from: "Acme <onboarding@resend.dev>",
         to: import.meta.env.EMAIL_SENDER,
-        subject: "Hochzeit Zusage",
+        subject: `Zusage von ${reqData.gaeste}`,
         react: EmailTemplate({ ...reqData }),
     } as any);
 

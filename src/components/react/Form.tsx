@@ -54,14 +54,7 @@ export function InputForm() {
             body: JSON.stringify(data),
         });
         toast({
-            title: "Danke, dass Du Bescheid gegeben hast! Wir haben folgende Nachricht erhalten.",
-            description: (
-                <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-                    <code className="text-white">
-                        {JSON.stringify(data, null, 2)}
-                    </code>
-                </pre>
-            ),
+            title: "Danke für deine Rückmeldung!",
         });
         form.reset();
     }

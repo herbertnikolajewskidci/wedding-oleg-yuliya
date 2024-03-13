@@ -41,7 +41,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
                 </p>
             )}
         </p>
-        <p>Folgendes Hauptspeisen wurden bestellt: </p>
+        <p>Folgende Hauptspeisen wurden bestellt: </p>
         <ul>
             {schnitzel !== "0" && <li>Schweineschnitzel: {schnitzel}</li>}
             {schweinebraten !== "0" && (
