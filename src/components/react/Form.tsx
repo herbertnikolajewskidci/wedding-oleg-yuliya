@@ -206,8 +206,8 @@ export function InputForm() {
                         />
                     </div>
                     {form.getValues().brauchtUnterkunft && (
-                        <div className="flex flex-col md:flex-row md:justify-between md: items-center">
-                            <div className="pb-8 md:pr-4 md:pb-0 w-full bg-img-anfahrt">
+                        <div className="flex flex-col md:flex-row  md:items-center">
+                            <div className="pb-8 md:pr-4 md:w-[66.66%] md:pb-0 w-full bg-img-anfahrt">
                                 <iframe
                                     src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.073394073073!2d12.2550733157073!3d49.073073079413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4775e3f3e3f3f3f3%3A0x3e3f3f3f3f3f3f3f!2s${item.strasse}%20${item.hausnummer}%2C%20${item.plz}%20${item.ort}!5e0!3m2!1sde!2sde!4v1631530730003!5m2!1sde!2sde`}
                                     width="100%"
